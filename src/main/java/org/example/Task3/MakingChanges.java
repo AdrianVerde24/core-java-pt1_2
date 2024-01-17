@@ -1,11 +1,13 @@
 package org.example.Task3;
 
-public static class MakingChanges {
+public class MakingChanges {
     public static void changeIdentities(Person p1, Person p2) {
-        String tempName =  p1.name;
-        int tempAge = p1.age;
-        p1.name= p2.name;
-        p2.name= tempName;
-        p1.age= p2.age;
-        p2.age= tempAge;
-    }
+        String tempName =  p1.getName();
+        int tempAge = p1.getAge();
+
+        p1.setName(p2.getName());
+        p1.setAge(p2.getAge());
+
+        p2.setName(tempName);
+        p2.setAge(tempAge);
+    }}

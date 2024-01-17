@@ -5,17 +5,22 @@ class Account {
     private long balance;
     private User owner;
 
-    public Account(long id, long balance, User owner) { /* compiled code */ }
+    public Account(long id, long balance, User owner) {
+        this.id = id;
+        this.balance= balance;
+        this.owner = owner;
 
-    public long getId() { /* compiled code */
-        return 0;
     }
 
-    public long getBalance() { /* compiled code */
-        return 0;
+    public long getId() {
+        return id;
     }
 
-    public User getOwner() { /* compiled code */
-        return null;
+    public long getBalance() {
+        return balance;
+    }
+
+    public User getOwner() {
+        return owner;
     }
 }

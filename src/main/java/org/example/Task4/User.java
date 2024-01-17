@@ -12,14 +12,14 @@ class User {
     }
 
     public long getId() {
-        return this.id;
+        return id;
     }
 
     public String getFirstName() {
-        return this.firstName;
+        return firstName;
     }
 
     public String getLastName() {
-        return this.lastName;
+        return lastName;
     }
 }

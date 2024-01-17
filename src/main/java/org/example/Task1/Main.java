@@ -3,12 +3,10 @@ import java.util.Scanner;  /* Import the Scanner class*/
 
 
 public class Main {
-    public <intArray> boolean checkSort(int arraySize, intArray[] arr){
-        String[] intArray = new String[arraySize];
+    public <intArray> boolean checkSort(int arraySize, int[] arr){
+        int[] intArray = new int [arraySize];
         for (int i=0; i < intArray.length - 1; i++){
-            int firstInt = Integer.parseInt(intArray[i]);
-            int secondInt= Integer.parseInt(intArray[i+1]);
-            if (firstInt > secondInt){
+            if (intArray[i] > intArray[i+1]){
                 return false;
             }
         }
@@ -20,11 +18,13 @@ public class Main {
         System.out.println("Enter First number- ");
         arraySize = scInteger.nextInt();  // Read first input
 
-        String[] intArray; //
+        int[] intArray = new int[arraySize];
 
         Scanner scArray = new Scanner(System.in);  // Create a second Scanner object
         System.out.println("Enter Integers for Array- ");
-        intArray = (scArray.nextLine()).split(" ",0);  // Read second  input
+        for(int i=0; i<arraySize; i++){
+            intArray[i] = scArray.nextInt();  // Read second  input
+        }
         System.out.println(" The answer is" + new Main().checkSort(arraySize,intArray));
     }
 }
